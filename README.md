@@ -2,8 +2,11 @@
 [![NPM](https://nodei.co/npm/@filipecovas/sweet-password-strength.png?compact=true)](https://nodei.co/npm/@filipecovas/sweet-password-strength/)
 
 [![Version](https://img.shields.io/npm/v/@filipecovas/sweet-password-strength.svg)](https://www.npmjs.com/package/@filipecovas/sweet-password-strength)
+![Build](https://github.com/filipecovas/sweet-password-strength/actions/workflows/publish.yml/badge.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![License](https://img.shields.io/npm/l/@filipecovas/sweet-password-strength.svg)](https://www.npmjs.com/package/@filipecovas/sweet-password-strength)
 
-## Sweet Password Strength React Compoent Guide
+## Sweet Password Strength React Component Guide
 
 Congrats! You are just a few steps away from using the component.
 (Under Construction!!!)

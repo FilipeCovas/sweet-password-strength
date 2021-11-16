@@ -1,6 +1,7 @@
 # Sweet Password Strength React Compoent Guide
 
 Congrats! You are just a few steps away from using the component.
+(Under Construction!!!)
 
 ## Installation
 

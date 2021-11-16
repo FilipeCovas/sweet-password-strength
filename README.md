@@ -1,4 +1,9 @@
-# Sweet Password Strength React Compoent Guide
+# sweet-password-strength
+[![NPM](https://nodei.co/npm/@filipecovas/sweet-password-strength.png?compact=true)](https://nodei.co/npm/@filipecovas/sweet-password-strength/)
+
+[![Version](https://img.shields.io/npm/v/@filipecovas/sweet-password-strength.svg)](https://www.npmjs.com/package/@filipecovas/sweet-password-strength)
+
+## Sweet Password Strength React Compoent Guide
 
 Congrats! You are just a few steps away from using the component.
 (Under Construction!!!)

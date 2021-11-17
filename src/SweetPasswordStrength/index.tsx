@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import passwordValidator from 'password-validator';
 import { Container } from './styles';
 import ProgressBar from '../components/ProgressBar';
-import { ISweetPasswordStrength, IPasswordStrenghtState } from './types';
+import { ISweetPasswordStrength, IPasswordStrengthState } from './types';
 
 export function SweetPasswordStrength({
   password,
   onChange,
 }: ISweetPasswordStrength) {
-  const [passwordStrenght, setPasswordStrenght] = useState<
-    IPasswordStrenghtState
+  const [passwordStrength, setPasswordStrength] = useState<
+    IPasswordStrengthState
   >({
-    bgcolor: 'softBackground',
-    status: 'Força da password',
+    bgcolor: '#202024',
+    status: 'Password Strength',
     completed: '1',
   });
 
@@ -42,49 +42,44 @@ export function SweetPasswordStrength({
     const validatorLength = Array.isArray(validator) ? validator.length : 0;
 
     if (validatorLength === 0) {
-      setPasswordStrenght({
-        bgcolor: 'success',
-        status: 'Forte',
+      setPasswordStrength({
+        bgcolor: '#2acfc2',
+        status: 'Strong',
         completed: '100',
       });
-    } else if (!password) {
-      setPasswordStrenght({
-        bgcolor: 'softBackground',
-        status: 'Força da password',
+    } else if (!password || password === '') {
+      setPasswordStrength({
+        bgcolor: '#202024',
+        status: 'Password Strength',
         completed: '1',
       });
     } else {
       var completed = 100 - (validatorLength * 100) / 6;
 
-      setPasswordStrenght({
-        bgcolor: completed >= 50 ? 'warning' : 'danger',
-        status: completed >= 50 ? 'Normal' : 'Fraca',
+      setPasswordStrength({
+        bgcolor: completed >= 50 ? '#eac700' : '#ff3860',
+        status: completed >= 50 ? 'Normal' : 'Weak',
         completed: completed.toString(),
       });
     }
   };
 
-  const handleChange = () => {
+  useEffect(() => {
     validationHandle(password);
-    onChange({
-      bgcolor: 'softBackground',
-      status: 'Força da password',
-      completed: '1',
-    });
-  };
+  }, [password]);
 
   useEffect(() => {
-    if (password && password !== '') {
-      handleChange();
+    if (passwordStrength) {
+      onChange(passwordStrength);
     }
-  }, [password]);
+  }, [passwordStrength]);
 
   return (
     <Container>
       <ProgressBar
-        status={passwordStrenght.status}
-        bgcolor={passwordStrenght.bgcolor}
-        completed={passwordStrenght.completed}
+        status={passwordStrength.status}
+        bgcolor={passwordStrength.bgcolor}
+        completed={passwordStrength.completed}
         style={!password ? { opacity: '0.5' } : {}}
       />
     </Container>

@@ -23,7 +23,7 @@ const progressBarStripesAnimation = keyframes`
 
 export const Container = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.inputBackground};
+  background-color: #edf2f7;
   border-radius: 3px;
   height: 25px;
   position: relative;
@@ -36,7 +36,7 @@ export const Filler: any = styled.div`
   bottom: 0;
   height: 25px;
   width: ${(props: any) => props.completed}%;
-  background-color: ${(props: any) => `${props.theme[props.bgcolor]}c2`};
+  background-color: ${(props: any) => `${props.bgcolor}c2`};
   transition: width 1s ease-in-out;
   border-radius: 'inherit';
   text-align: 'right';
@@ -46,7 +46,7 @@ export const Filler: any = styled.div`
   animation: ${progressBarStripesAnimation} 2s linear infinite;
   ${(props: any) =>
     GradientStriped({
-      color: `${props.theme[props.bgcolor]}`,
+      color: `${props.bgcolor}`,
       angle: '45deg',
     })}
 `;
@@ -56,7 +56,7 @@ export const Label: any = styled.span`
   left: 10px;
   bottom: 5px;
   padding: 0;
-  color: ${props => props.theme.textWhite};
+  color: #fff;
   text-shadow: 1px 1px 2px #00000070;
   font-weight: bold;
   z-index: 1;

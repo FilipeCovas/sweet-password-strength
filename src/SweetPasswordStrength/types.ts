@@ -1,9 +1,9 @@
 export interface ISweetPasswordStrength {
   password: string;
-  onChange: (PasswordStrenghtState: IPasswordStrenghtState) => void;
+  onChange: (PasswordStrenghtState: IPasswordStrengthState) => void;
 }
 
-export interface IPasswordStrenghtState {
+export interface IPasswordStrengthState {
   bgcolor: string;
   completed: string;
   status: string;
